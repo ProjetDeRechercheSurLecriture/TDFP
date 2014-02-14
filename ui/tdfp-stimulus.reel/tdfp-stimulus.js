@@ -30,9 +30,13 @@ exports.TdfpStimulus = AbstractStimulus.specialize( /** @lends TdfpStimulus# */ 
       var audioPath = this.audioAssetsPath || "missingpath";
       audioPath += "/";
 
-      stimulus.audioFile = audioPath + stimulus.audioFile;
+      stimulus.auditoryFileSpontaneousQuestion1 = audioPath + stimulus.auditoryFileSpontaneousQuestion1;
+      stimulus.audioFileSpontaneousQuestion2 = audioPath + stimulus.audioFileSpontaneousQuestion2;
+      stimulus.audioFileDelayedImitation = audioPath + stimulus.audioFileDelayedImitation;
+      stimulus.audioFileImmediateImitation = audioPath + stimulus.audioFileImmediateImitation;
       stimulus.primeImage = imagePath + stimulus.primeImage;
-
+      
+      stimulus.audioFile = stimulus.auditoryFileSpontaneousQuestion1;
       this.super(stimulus);
     }
   },
@@ -42,13 +46,8 @@ exports.TdfpStimulus = AbstractStimulus.specialize( /** @lends TdfpStimulus# */ 
     value: function() {
       console.log("Button 1 is pressed ");
 
-      var audioPath = this.audioAssetsPath || "missingpath";
-      audioPath += "/";
-      this.audioFile = audioPath + "TCPP_Paul3.mp3";
-      this.audioElement.src = this.audioFile;
-      this.playAudio();
+      this.playAudio(this.auditoryFileSpontaneousQuestion1);
       this.canPlayButton2 = true;
-
     }
   },
 
@@ -57,12 +56,7 @@ exports.TdfpStimulus = AbstractStimulus.specialize( /** @lends TdfpStimulus# */ 
     value: function() {
       console.log("Button 2 is pressed ");
 
-      var audioPath = this.audioAssetsPath || "missingpath";
-      audioPath += "/";
-      this.audioFile = audioPath + "TCPP_Lou3.mp3";
-      this.audioElement.src = this.audioFile;
-
-      this.playAudio();
+      this.playAudio(this.auditoryFileSpontaneousQuestion2);
       this.canPlayButton1 = false;
       this.canPlayButton3 = true;
 
@@ -73,12 +67,7 @@ exports.TdfpStimulus = AbstractStimulus.specialize( /** @lends TdfpStimulus# */ 
     value: function() {
       console.log(" Button 3 is pressed ");
 
-      var audioPath = this.audioAssetsPath || "missingpath";
-      audioPath += "/";
-      this.audioFile = audioPath + "TCPP_Lucas3.mp3";
-      this.audioElement.src = this.audioFile;
-
-      this.playAudio();
+      this.playAudio(this.audioFileDelayedImitation);
       this.canPlayButton2 = false;
       this.canPlayButton4 = true;
 
@@ -89,12 +78,7 @@ exports.TdfpStimulus = AbstractStimulus.specialize( /** @lends TdfpStimulus# */ 
     value: function() {
       console.log(" Button 4 is pressed ");
 
-      var audioPath = this.audioAssetsPath || "missingpath";
-      audioPath += "/";
-      this.audioFile = audioPath + "TCPP_Guy3.mp3";
-      this.audioElement.src = this.audioFile;
-
-      this.playAudio();
+      this.playAudio(this.audioFileImmediateImitation);
       this.canPlayButton3 = false;
 
     }
