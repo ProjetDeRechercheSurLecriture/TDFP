@@ -8,7 +8,7 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "oneImageStimulus"}
+                "element": {"#": "tdfpStimulus"}
             }
         },
 
@@ -32,31 +32,149 @@
             "bindings": {
                 "src": {"<-": "@owner.currentReinforcementImageSrc ?? '../../assets/img/blank.png'"}
             }
+        },
+
+        "spontaneousQuestion1Listener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "spontaneousQuestion1",
+                "handler": {"@": "owner"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
+
+        "spontaneousQuestion2Listener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "spontaneousQuestion2",
+                "handler": {"@": "owner"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
+
+        "deleayedImitationListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "delayedImitation",
+                "handler": {"@": "owner"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
+
+        "immediateImitationListener": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "immediateImitation",
+                "handler": {"@": "owner"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
+
+        "spontaneousQuestion1Button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "spontaneousQuestion1Button"},
+                "enabled" : true,
+                "label": "1",
+                "played" : false
+            },
+            "listeners": [
+            {
+                "type": "action",
+                "useCapture": false,
+                "listener": {"@": "spontaneousQuestion1Listener"}
+            }],
+            "bindings": {
+                "enabled": {"<-": "@owner.canPlayButton1"}
+            }
+        },
+
+        "spontaneousQuestion2Button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "spontaneousQuestion2Button"},
+                "enabled" : false,
+                "label": "2"
+            },
+            "listeners": [{
+                "type": "action",
+                "useCapture": false,
+                "listener": {"@": "spontaneousQuestion2Listener"}
+            }],
+            "bindings": {
+                "enabled": {"<-": "@owner.canPlayButton2"}
+            }
+        },
+
+        "delayedImitationButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "delayedImitationButton"},
+                "enabled": false,
+                "label": "3"
+            },
+            "listeners": [
+            {
+                "type": "action",
+                "useCapture": false,
+                "listener": {"@": "deleayedImitationListener"}
+            }
+            ],
+            "bindings": {
+                "enabled": {"<-": "@owner.canPlayButton3"}
+            }
+
+        },
+
+        "immediateImitationButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "immediateImitationButton"},
+                "enabled": false,
+                "label": "4"
+            },
+            "listeners": [
+            {
+                "type": "action",
+                "useCapture": false,
+                "listener": {"@": "immediateImitationListener"}
+            }
+            ],
+            "bindings": {
+                "enabled": {"<-": "@owner.canPlayButton4"}
+            }
         }
+
     }
     </script>
 </head>
 <body>
-    <div data-montage-id="oneImageStimulus" class="TdfpStimulus Main-content-container">
+    <div data-montage-id="tdfpStimulus" class="TdfpStimulus Main-content-container">
+
+        <div class="ExperimenterButtons">       
+            <button data-montage-id="spontaneousQuestion1Button"></button>
+            <button data-montage-id="spontaneousQuestion2Button"></button>
+            <button data-montage-id="delayedImitationButton"></button>
+            <button data-montage-id="immediateImitationButton"></button>
+        </div>
 
         <div class="Stimulus-content-left Stimulus-prime-image-area">
             <img data-montage-id="visualPrime" class="Stimulus-prime-image" src="../../assets/img/blank.png">
         </div>
 
-            <img hidden data-montage-id="reinforcementImage" src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-        <div class="Stimulus-content-right" >
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
-            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+        <div class="Stimulus-content-right">
+            <img hidden data-montage-id="reinforcementImage" src="../../assets/img/blank.png"/>
         </div>
-        <audio id="audio" src=""></audio>        
+
+        <audio id="audio" src=""></audio> 
     </div>
 </body>
 </html>
