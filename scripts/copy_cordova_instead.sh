@@ -6,12 +6,12 @@ mop || {
 	exit 1;
 }
 
-cp background_cordova.js builds/pre-tdfm/background.js
+cp background_cordova.js builds/pre-tdfp/background.js
 
 echo "Removing extra stuff from builds to reduce apk size"
 echo 'TODO figure out what this does:   "bundles": ["ui/main.reel"], '
 
-cd  builds/pre-tdfm/packages && find . -name  "*[^d].js" -delete && find . -name  "*.md" -delete
+cd  builds/pre-tdfp/packages && find . -name  "*[^d].js" -delete && find . -name  "*.md" -delete
 
 # ipad loads with this commented out
 # sed 's/<meta data-insertcordovahere="" \/>/<script type="text\/javascript" charset="utf-8" src="cordova.js"><\/script><script type="text\/javascript" charset="utf-8" src="cordova-bridge.js"><\/script>/' ../index.html  > output

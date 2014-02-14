@@ -1,9 +1,9 @@
 /**
- * @module ui/tdfm.reel
+ * @module ui/tdfp.reel
  * @requires oprime-montage/ui/experiment
  */
 var Experiment = require("oprime-montage/ui/experiment.reel").Experiment,
-    designToForceIncludeInMop = require("assets/stimuli/tdfm_design.json");
+    designToForceIncludeInMop = require("assets/stimuli/tdfp_design.json");
 
 // var enLocales = require("assets/stimuli/locale/en/messages.json");
 // var frLocales = require("assets/stimuli/locale/fr/messages.json");
@@ -11,14 +11,14 @@ var Experiment = require("oprime-montage/ui/experiment.reel").Experiment,
 
 
 /**
- * @class TDFM
+ * @class TDFP
  * @extends Experiment
  */
-var TDFM = exports.TDFM = Experiment.specialize( /** @lends TDFM# */ {
+var TDFP = exports.TDFP = Experiment.specialize( /** @lends TDFP# */ {
     constructor: {
-        value: function TDFM() {
+        value: function TDFP() {
             // console.log(designToForceIncludeInMop);
-            this.experimentalDesignSrc = "assets/stimuli/tdfm_design.json";
+            this.experimentalDesignSrc = "assets/stimuli/tdfp_design.json";
             this.super();
             this.loadDesign(designToForceIncludeInMop);
 
@@ -46,4 +46,4 @@ var TDFM = exports.TDFM = Experiment.specialize( /** @lends TDFM# */ {
     // }
 });
 
-exports.Tdfm = TDFM;
+exports.Tdfp = TDFP;

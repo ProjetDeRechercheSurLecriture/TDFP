@@ -1,5 +1,5 @@
 {
-  "name": "TDFMalpha",
+  "name": "TDFPalpha",
   "version": "0.1.1",
   "description": "",
   "app": {
@@ -14,9 +14,9 @@
   ],
 
   "icons": {
-    "16": "assets/img/ic_tdfm16.png",
-    "48": "assets/img/ic_tdfm48.png",
-    "128": "assets/img/ic_tdfm128.png"
+    "16": "assets/img/ic_tdfp16.png",
+    "48": "assets/img/ic_tdfp48.png",
+    "128": "assets/img/ic_tdfp128.png"
   },
 
   "sandbox": {

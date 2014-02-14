@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
 
-  var montageMobileWebViewsRoot = "../CordovaChromeTdfmWrapper";
+  var montageMobileWebViewsRoot = "../CordovaChromeTdfpWrapper";
   // Project configuration.
   grunt.initConfig({
     tests: {

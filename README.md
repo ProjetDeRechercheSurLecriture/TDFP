@@ -1,6 +1,6 @@
 
-# What is TDFM?
-TDFM was developed by Dr. Marquis of the Speech Language Pathology and Audiology Department of Factulty of Medicine, University of Montreal. For more information, contact [Dr. Marquis](https://twitter.com/AlxMarquis)
+# What is TDFP?
+TDFP was developed by Dr. Marquis of the Speech Language Pathology and Audiology Department of Factulty of Medicine, University of Montreal. For more information, contact [Dr. Marquis](https://twitter.com/AlxMarquis)
 
 # License 
 

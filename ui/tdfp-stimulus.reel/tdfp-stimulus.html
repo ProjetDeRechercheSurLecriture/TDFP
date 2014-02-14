@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="tdfp-stimulus.css">
+    <link rel="stylesheet" type="text/css" href="../../node_modules/oprime-montage/ui/stimulus.reel/stimulus.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "oneImageStimulus"}
+            }
+        },
+
+        "visualPrime": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "visualPrime"},
+                "crossOrigin": null
+            },
+            "bindings": {
+                "src": {"<-": "@owner.primeImage ?? '../../assets/img/blank.png'"}
+            }
+        },
+
+        "reinforcementImage": {
+            "prototype": "digit/ui/image.reel",
+            "properties": {
+                "element": {"#": "reinforcementImage"},
+                "crossOrigin": null
+            },
+            "bindings": {
+                "src": {"<-": "@owner.currentReinforcementImageSrc ?? '../../assets/img/blank.png'"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="oneImageStimulus" class="TdfpStimulus Main-content-container">
+
+        <div class="Stimulus-content-left Stimulus-prime-image-area">
+            <img data-montage-id="visualPrime" class="Stimulus-prime-image" src="../../assets/img/blank.png">
+        </div>
+
+            <img hidden data-montage-id="reinforcementImage" src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+        <div class="Stimulus-content-right" >
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+            <img src="../../assets/stimuli/image/MorphologyGame_reinforcementcartoon_BEFORE.png"/> 
+        </div>
+        <audio id="audio" src=""></audio>        
+    </div>
+</body>
+</html>

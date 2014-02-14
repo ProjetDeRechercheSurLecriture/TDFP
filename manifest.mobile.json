@@ -1,7 +1,7 @@
 {
-  "packageId": "com.github.projetderecherchesurlecriture.tdfm",
+  "packageId": "com.github.projetderecherchesurlecriture.tdfp",
   "versionCode": 1,
-  "description": "TDFM",
+  "description": "TDFP",
   "author": "Projet PRE",
   "CFBundleVersion": "1.1.1"
 }
