@@ -1,9 +1,8 @@
 /**
  * @module ui/tdfp-stimulus.reel
- * @requires core/contextualizable-component
+ * @requires oprime-montage/core/abstract-stimulus
  */
-var ContextualizableComponent = require("oprime-montage/core/contextualizable-component").ContextualizableComponent,
-  AbstractStimulus = require("oprime-montage/core/abstract-stimulus").AbstractStimulus;
+var AbstractStimulus = require("oprime-montage/core/abstract-stimulus").AbstractStimulus;
 
 
 /**
