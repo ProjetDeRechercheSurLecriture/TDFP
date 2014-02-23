@@ -1,3 +1,16 @@
-.Tdfp {
+.TDFP {
 
+}
+
+.TDFP .ExperimentReport {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	width: 60%;
+}
+.TDFP .ExperimentReport  p {
+	margin-bottom: 1em;
+}
+.TDFP .ExperimentReport  .well {
+	padding: 1em;
 }
