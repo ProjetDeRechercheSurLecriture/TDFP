@@ -1,6 +1,5 @@
-
 # What is TDFP?
-TDFP was developed by the PRE project, a collaboration between McGill University and the University of Montreal. For more information, contact [Dr. Marquis](https://twitter.com/AlxMarquis)
+«Qu'est-ce que c'est?» est un test de dépistage visant à détecter les difficultés d'orthographe chez les enfants avant qu'ils n'apprennent à écrire. «Qu'est-ce que c'est?» a été conçu par Drs. Marianne Paul et Susan Rvachew (Child Phonology Lab, Université McGill)et évalue particulièrement la capacité des enfants à prononcer correctement tous les sons (phonèmes) de la parole. «Qu'est-ce que c'est?» est l'un des tests d'une batterie de tests de dépistage des difficultés orthographiques appelé «Phophlo».
 
 # License 
 
