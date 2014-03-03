@@ -29,6 +29,10 @@ exports.TdfpStimulus = AbstractStimulus.specialize( /** @lends TdfpStimulus# */ 
             var audioPath = this.audioAssetsPath || "missingpath";
             audioPath += "/";
 
+            if (stimulus.primeImage.indexOf("../assets") > -1) {
+                imagePath = "";
+                audioPath = "";
+            }
             stimulus.audioFileSpontaneousQuestion1 = audioPath + stimulus.audioFileSpontaneousQuestion1;
             stimulus.audioFile = stimulus.audioFileSpontaneousQuestion1;
             stimulus.audioFileSpontaneousQuestion2 = audioPath + stimulus.audioFileSpontaneousQuestion2;
@@ -36,7 +40,7 @@ exports.TdfpStimulus = AbstractStimulus.specialize( /** @lends TdfpStimulus# */ 
             stimulus.audioFileImmediateImitation = audioPath + stimulus.audioFileImmediateImitation;
             stimulus.primeImage = imagePath + stimulus.primeImage;
             stimulus.responses = [];
-            
+
             this.super(stimulus);
             this.primesUsed = [{
                 medium: "visual",
