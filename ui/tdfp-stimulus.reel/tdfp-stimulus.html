@@ -23,14 +23,18 @@
             }
         },
 
-        "reinforcementImage": {
-            "prototype": "digit/ui/image.reel",
+        "reinforcement": {
+            "prototype": "oprime-montage/ui/reinforcement.reel/reinforcement-animation.reel",
             "properties": {
-                "element": {"#": "reinforcementImage"},
-                "crossOrigin": null
+                "element": {"#": "reinforcement"}
             },
             "bindings": {
-                "src": {"<-": "@owner.currentReinforcementImageSrc ?? '../../assets/img/blank.png'"}
+                "counter": {"<->": "@owner.ownerComponent.templateObjects.reinforcement.counter"},
+                "shouldShowFirst": {"<->": "@owner.ownerComponent.templateObjects.reinforcement.shouldShowFirst"},
+                "shouldShowLast": {"<->": "@owner.ownerComponent.templateObjects.reinforcement.shouldShowLast"},
+                "firstImageSrc": {"<->": "@owner.ownerComponent.templateObjects.reinforcement.firstImageSrc"},
+                "lastImageSrc": {"<->": "@owner.ownerComponent.templateObjects.reinforcement.lastImageSrc"},
+                "currentItem": {"<-": "@owner.ownerComponent.templateObjects.reinforcement.currentItem"}
             }
         },
 
@@ -141,16 +145,38 @@
                 "enabled": false,
                 "label": "4"
             },
-            "listeners": [
-            {
+            "listeners": [{
                 "type": "action",
                 "useCapture": false,
                 "listener": {"@": "immediateImitationListener"}
-            }
-            ],
+            }],
             "bindings": {
                 "enabled": {"<-": "@owner.canPlayButton4"}
             }
+        },
+
+        "correct": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "correct"}
+            },
+            "listeners": [{
+                "type": "action",
+                "useCapture": false,
+                "listener": {"@": "owner"}
+            }]
+        },
+
+        "incorrect": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "incorrect"}
+            },
+            "listeners": [{
+                "type": "action",
+                "useCapture": false,
+                "listener": {"@": "owner"}
+            }]
         }
 
     }
@@ -159,11 +185,18 @@
 <body>
     <div data-montage-id="tdfpStimulus" class="TdfpStimulus Main-content-container">
 
-        <div class="ExperimenterButtons">       
+        <div class="Experiment-ExperimenterButtons ">       
             <button data-montage-id="spontaneousQuestion1Button"></button>
+            <br/>
             <button data-montage-id="spontaneousQuestion2Button"></button>
+            <br/>
             <button data-montage-id="delayedImitationButton"></button>
+            <br/>
             <button data-montage-id="immediateImitationButton"></button>
+            <br/>
+            <button data-montage-id="correct"><i class="fa fa-pagelines"></i></button>
+            <br/>
+            <button data-montage-id="incorrect"><i class="fa fa-twitter"></i></button>
         </div>
 
         <div class="Stimulus-content-left Stimulus-prime-image-area">
@@ -171,7 +204,7 @@
         </div>
 
         <div class="Stimulus-content-right">
-            <img hidden data-montage-id="reinforcementImage" src="../../assets/img/blank.png"/>
+            <div data-montage-id="reinforcement"></div> 
         </div>
 
         <audio id="audio" src=""></audio> 
