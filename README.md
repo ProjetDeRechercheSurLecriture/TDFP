@@ -1,5 +1,5 @@
 # What is TDFP?
-«Qu'est-ce que c'est?» est un test de dépistage visant à détecter les difficultés d'orthographe chez les enfants avant qu'ils apprennent à écrire. «Qu'est-ce que c'est?» a été conçu par Drs. Marianne Paul et Susan Rvachew (Child Phonology Lab, Université McGill)et évalue particulièrement la capacité des enfants à prononcer correctement tous les sons (phonèmes) de la parole. «Qu'est-ce que c'est?» est l'un des tests de l'outil de dépistage des difficultés orthographiques appelé «Phophlo».
+« Qu'est-ce que c'est? » est un test visant à dépister les difficultés d'orthographe chez les enfants avant qu'ils apprennent à écrire. « Qu'est-ce que c'est? » a été conçu par Drs. Marianne Paul et Susan Rvachew (École des sciences de la communication humaine, Université McGill) et évalue la capacité des enfants à prononcer correctement tous les sons (phonèmes) de la parole. « Qu'est-ce que c'est? » est l'un des tests de l'outil de dépistage des difficultés orthographiques « Phophlo ».
 
 # License 
 
